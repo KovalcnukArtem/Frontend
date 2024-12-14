@@ -52,3 +52,29 @@
 // if (userAge < 16) {
 //   alert("Ви дитина");
 // }
+
+// скрипт для їх замовлення
+// товар, ціна за одну штуку, ціна доставки, виводити суму замовлення
+// message - у форматі "You ordered <назва товару> worth <total price> credits"
+// const productName = "shredded chease";
+// const productNumber = 5;
+// const productPrice = 10;
+// const totalPrice = productNumber * productPrice;
+// console.log(totalPrice);
+
+// const message = `You ordered ${productName} worth ${totalPrice} credits`;
+// console.log(message);
+
+// const actorName = "Tom Cruize";
+// const actorLenght = actorName.length;
+// console.log(actorLenght);
+
+// const lastIndex = actorLenght - 1;
+// console.log(lastIndex);
+
+// const lastElement = actorName[lastIndex];
+// console.log(lastElement);
+// console.log(actorName[4]);
+// console.log(actorName.toUpperCase());
+// console.log(actorName.indexOf("Cruize"));
+// console.log(actorName.indexOf(" "));
