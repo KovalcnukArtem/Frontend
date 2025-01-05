@@ -205,3 +205,236 @@
 // } else {
 //   console.log("Ви не знали, це EcMAScript");
 // }
+
+// Напиши скрипт обробки покупки в магазині.
+//   - Баланс користувача зберігається в змінній balance
+//   - Сумма покупки зберігається в змінній payment
+//   - Перед перевіркою вивести повідомлення на екран:
+//   «Загальна вартість замовлення [число] кредитів. Перевіряємо кількість
+//   доступних коштів на рахунку»
+//  - Якщо сума покупки не перевищує баланс:
+//      - Відняти з балансу суму покупки
+//    - Вивести повідомлення «На рахунку залишилося [число] кредитів»
+//  - Якщо сума покупки перевищує баланс:
+//     - Вивести повідомлення
+// «На рахунку недостатньо коштів для проведення операції!»
+//  - В кінці вивести повідомлення «Операція завершена»
+// let balance = 10000;
+// const userPayment = 20000;
+// console.log(
+//   `Загальна вартість замовлення ${userPayment} кредитів. Перевіряємо кількість доступних коштів на рахунку`
+// );
+// if (userPayment <= balance) {
+//   // balance = balance - userPayment;
+//   balance -= userPayment;
+//   console.log(`На рахунку залишилося ${balance} кредитів`);
+// } else {
+//   console.log("На рахунку недостатньо коштів для проведення операції!");
+// }
+// console.log("Операція завершена");
+
+// const browser = "Firefox";
+// let text;
+
+// // if(browser == 'Edge') {
+// //   text = "You've got the Edge!";
+// // } else if (browser == 'Chrome'
+// //  || browser == 'Firefox'
+// //  || browser == 'Safari'
+// //  || browser == 'Opera') {
+// //   text = 'Ми підтримуємо і ці браузери' ;
+// // } else {
+// //   text =  'Маємо надію, що ця сторінка виглядає добре!' ;
+// // }
+
+// switch (browser) {
+//   case "Edge":
+//     text = "You've got the Edge!";
+//     break;
+//   case "Chrome":
+//   case "Firefox":
+//   case "Safari":
+//   case "Opera":
+//     text = "Ми підтримуємо і ці браузери";
+//     break;
+//   default:
+//     text = "Маємо надію, що ця сторінка виглядає добре!";
+//     // }
+//     // console.log(text);
+
+//     let a1 = 0;
+//     let output;
+
+// if (a1 === 0) {
+//   output = 0;
+// }
+// if (a1 === 1) {
+//   output = 1;
+// }
+// if (a1 === 2 || a1 === 3) {
+//   output = "2,3";
+// }
+
+// switch (a1) {
+//   case 0:
+//     output = 0;
+//     break;
+//   case 1:
+//     output = 1;
+//     break;
+//   case 2:
+//   case 3:
+//     output = "2,3";
+//     break;
+//   default:
+//     console.log("Invalide");
+// }
+
+// console.log(output);
+
+// Напиши скрипт вибору готеля по кількості зірок (1 — 20$, 2 — 30$, 3 — 50$, 4 — 70$, 5 — 120$). Якщо в змінній stars щось окрім чисел 1-5, виведи рядок: 'Токої кількості зірок немає'
+// const stars = 3;
+// let price;
+
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
+//   case 2:
+//     price = 30;
+//     break;
+//   case 3:
+//     price = 50;
+//     break;
+//   case 4:
+//     price = 70;
+//     break;
+//   case 5:
+//     price = 120;
+//     break;
+//   default:
+//     console.log("Такої кількості зірок немає");
+// }
+// console.log(price);
+
+// Знайти суму всіх парних цілих чисел від одиниці до цього числа
+// Парні числа — це ті, що можна поділити на 2 без остачі %
+// if (index % 2 === 0)
+
+// const number1 = 564;
+// let number1Result = 0
+
+// for (let i = 0; i <= number1; i += 1) {
+//   console.log(i);
+
+//   if (i % 2 === 0) {
+//     console.log("Парне" , i);
+//     number1Result += i;
+//   }
+
+// }
+
+// console.log(number1Result);
+
+// for (let i = 0; i <= 20; i += 5) {
+//     console.log(i);
+// }
+// while (count < 10) {
+//   console.log(`Count: ${count}`);
+//   count += 1;
+// }
+// do {
+//   statement // код, який буде виконуватися
+// } while (condition);
+
+// 1
+// Вивести в консоль числа від 1 до 5 всіма циклами
+// let num = 1;
+
+// while (num <= 5) {
+//   console.log(num);
+//   num += 1;
+// }
+
+// do {
+//   console.log(num);
+//   num += 1;
+// } while (num <= 5);
+
+// for (let num = 1; num <= 5; num += 1) {
+//   console.log(num);
+// }
+
+//   Доповни код таким чином, щоб у змінну w записувалося
+//  перше число у проміжку від start до end,
+// яке ділиться на 5 без остачі
+// const start = 6;
+// const end = 17;
+// let w;
+
+// for (let i = start; i <= end; i += 1) {
+//   //   console.log(i);
+//   //   console.log(i % 5 === 0);
+//   if (i % 5 === 0) {
+//     console.log("Знайшли число");
+//     w = i;
+//     break;
+//   }
+// }
+// console.log(w);
+
+// Виведіть в консоль всі непарні числа від 10 до 20
+// за допомогою циклу for
+// const start = 10;
+// const end = 20;
+
+// for (let i = start; i <= end; i += 1) {
+//   //   console.log(i);
+//   if (i % 2 === 0) {
+//     // console.log("Знайшли парне");
+//     continue;
+//   }
+//   console.log("Знайшли непарне", i);
+// }
+
+// Напиши скрипт який порахує суму всіх парних чисел,
+// які входять в діапазон чисел в змінних від min до max.
+// Наприклад, якщо min=0 и max=5
+// const min = 0;
+// const max = 5;
+// let totalSum = 0;
+
+// for (let i = min; i <= max; i += 1) {
+//   console.log(i);
+//   if (i % 2 === 0) {
+//     console.log("Знайшли парне", i);
+//     totalSum += i;
+//   }
+// }
+
+// for (let i = min; i <= max; i += 1) {
+//   console.log(i);
+//   if (i % 2 !== 0) {
+//     console.log("Знайшли непарне", i);
+//     continue;
+//   }
+//   totalSum += i;
+// }
+// console.log(totalSum);
+
+// Напиши скрипт який підраховує загальну суму зп працівників.
+// Кількість робітників зберігається в змінній employees.
+// ЗП кожного працівника це випадкове число від 500 до 5000.
+// Записати суму в змінну totalSalary і вивести в на сторінку.
+
+// // 1 змінні
+// const minSalary = 500;
+// const maxSalary = 5000;
+// const employees = 12;
+// let totalSalary = 0;
+
+// for (let i = 0; i <= employees; i += 1) {
+//   // console.log(i);
+//   const salary = Math.random() * (maxSalary - minSalary) + minSalary;
+
+// console
