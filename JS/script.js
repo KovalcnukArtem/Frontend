@@ -685,3 +685,59 @@
 // const array = arr.slice(0, 6);
 
 // console.log(array);
+
+//                                                          lesson 9
+// Перетворити масив:
+// const arrayOriginal = ["мango-10", "Kiwi-2", "Monkong-2", "Singu-2", "Mango-1", "Ajax-1", "Poly-1", "singu-20"];
+
+// на масив arrayNew:
+//todo: ["Mango-1", "Ajax-1", "Poly-1", "Kiwi-2", "Monkong-2", "Singu-2"];
+
+// не змінюючи значення елементів та використовуючи методи:
+// push(), pop(), unshift(), shift(),
+// slice(), splice(), concat() за власним бажанням!
+
+// let arrayNew = [];
+
+// //! Код виконаного завдання
+
+// console.log("arrayOriginal:", arrayOriginal);
+// console.log("arrayNe
+// console.log("arrayNew:", arrayNew);
+
+//                                                                .
+
+// 1.
+// Створити функцію hello1(),
+// яка при визові буде вертати текст “Привіт JavaScript”.
+// const hello = function () {
+//   return "Hi JavaScript";
+// };
+// hello();
+// console.log(hello());
+
+// 2.
+// Напишіть функцію hello2(),
+//  яка при виклику буде приймати змінну name (наприклад, «Василь»)
+//  і виводити рядок (в нашому випадку «Привіт, Василь»).
+// const hello = function (name) {
+//   return `Hi ${name}`;
+// };
+
+// hello();
+
+// console.log(hello("Vasil"));
+
+// Напишіть функцію mul(n, m), яка приймає два аргументи
+//  і повертає добуток, суму і різницю цих аргументів.
+//  Перевірте її роботу.
+// const mul = function (n, m) {
+//   const multiply = n * m;
+//   const sum = n + m;
+//   const difference = n - m;
+
+//   return [multiply, sum, difference];
+// };
+
+// const result = mul(10, 5);
+// console.log(result);
