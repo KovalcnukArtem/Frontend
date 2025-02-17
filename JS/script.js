@@ -741,3 +741,318 @@
 
 // const result = mul(10, 5);
 // console.log(result);
+
+// 1
+// Напиши функцію logItems(items) для перебору і логування масиву
+// const logItems = function (items) {
+//   console.log(items);
+
+//   for (const item of items) {
+//     console.log(item);
+//   }
+// };
+//перевірь роботу функції викликами нижче
+// logItems(["Mango", "Kiwi", "Poly", "Ajax"]);
+// logItems([1, 2, 3, 4, 5]);
+
+// 2
+// Напиши фунцію що приймає масив і рахує суму всіх чисел
+
+// const calculateTotal = function (arr) {
+//   //змінна для зберігання результату
+//   let result = 0;
+//   // за доп for перебираємо масив та рахуємо тотал
+//   for (const num of arr) {
+//     console.log(num);
+//     result += num;
+//   }
+//   // повертаємо результат роботи ф-ції
+//   return result;
+// };
+
+// const result1 = calculateTotal([2, 4, 6, 8]);
+// console.log(result1);
+
+/*створи функцію calculateTax, щоб вона повертала суму податку - результат множення суми на податкову ставку.
+що приймає два параметри:
+amount - число, сума від якої потрібно обчислити податок. 
+Обов'язковий параметр.
+taxRate - число, податкова ставка. Необов'язковий параметр. 
+За замовчуванням його значення має бути 0.2.*/
+
+// Виклик функції calculateTax(100, 0.1) повертає 10
+// Виклик функції calculateTax(200, 0.1) повертає 20
+// Виклик функції calculateTax(100, 0.2) повертає 20
+
+// const calculateTax = function (amount, taxRate = 0.2) {
+//   const tax = amount * taxRate;
+//   console.log(tax);
+//   return tax;
+// };
+
+// calculateTax(100, 0.1);
+
+// calculateTax(200, 0.1);
+
+// calculateTax(100);
+
+// const checkStorage = function (products, item) {
+//   const isIncluded = products.includes(item.toLowerCase());
+//   console.log(isIncluded);
+//   // let mes;
+//   // if (isIncluded) {
+//   //   mes = `${item} is available to order!`;
+//   // } else {
+//   //   "Sorry! We are out of stock!";
+//   // }
+//   // return mes;
+//   if (isIncluded) {
+//     return `${item} is available to order!`;
+//   }
+//   return "Sorry! We are out of stock!";
+// };
+
+// const res = checkStorage(["apple", "plum", "pear"], "pLuM");
+// console.log(res);
+
+const filterNumbers = function (array, ...args) {
+  let elements = [];
+
+  for (const element of array) {
+    if (args.includes(element)) {
+      elements.push(element);
+      console.log(element);
+    }
+  }
+
+  return elements;
+};
+// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
+// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
+// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
+
+/*   1.
+Напишіть функцію, яка приймає на вхід масив чисел 
+і повертає новий масив, в якому кожний елемент є 
+квадратом відповідного елементу вхідного масиву.
+Знайдіть суму елементів масиву 
+з використанням колбек-функції */
+// const arr = [1, 2, 3, 4, 5];
+// const squareArray = function (arr) {
+//   const array = [];
+//   for (const number of arr) {
+//     array.push(number ** 2);
+//   }
+//   return array;
+// };
+
+// const sumArray = function (arr, callback) {
+//   const newArray = callback(arr);
+//   console.log(newArray);
+//   let sum = 0;
+
+//   for (const num of newArray) {
+//     sum += num;
+//   }
+//   // console.log(sum);
+//   return sum;
+// };
+
+// const result = sumArray(arr, squareArray);
+// console.log(result);
+// const addArray = (arr) {
+
+// };
+// const result2 = sumArray(array, addArray)
+
+//                                                       СТРІЛКОВІ Ф-ЇЇ
+// Створити стрілкову функцію helloW(),
+// яка при визові буде вертати текст “Привіт JavaScript”.
+// const helloW = () => {
+//   return "Hello JavaSCript!";
+// };
+// console.log(helloW());
+
+const helloW = () => "Hello JavaSCript!";
+// console.log(helloW());
+
+/*   2.
+Напишіть стрілкову функцію hello2(), 
+яка при виклику буде приймати змінну userName 
+(наприклад, «Василь») і виводити рядок 
+(в нашому випадку «Привіт, Василь»). */
+const helloN = (username) => `Привіт ${username}`;
+// console.log(helloN("Vasil!"));
+
+/*   3.
+Напишіть стрілкову функцію mul(n, m), 
+яка приймає два аргументи і 
+повертає добуток, суму і різницю цих аргументів.
+Перевірте її роботу. */
+// const mul = (n, m) => {
+//   const multiply = n * m;
+//   const total = n + m;
+//   const difference = n - m;
+//   return [multiply, total, difference];
+// };
+// console.log(mul(6, 6));
+// const mul = (n, m) => [n * m, n + m, n - m];
+// console.log(mul(6, 6));
+
+/*   4.
+Напиши стрілкову функцію myAverageScore , 
+яка у якості аргументу отримує масив з оцінками, 
+і виводить користувачу його середній результат 
+у наступному форматі:
+
+Averagescore: A (якщо середня оцінка від 91 до 100)
+Average score: B (якщо середня оцінка від 81 до 90)
+Average score: C (якщо середня оцінка від 71 до 80)
+Average score: D (якщо середня оцінка від 70 і менше)
+Для перевірки:*/
+// console.log(myAverageScore([100, 75, 81, 96]));
+// console.log(myAverageScore([45, 63, 85, 70]));
+// const myAverageScore = (array) => {
+//   let sum = 0;
+//   for (const num of array) {
+//     sum += num;
+//   }
+//   console.log(sum);
+
+//   const average = sum / array.length;
+//   console.log(average);
+
+//   if (average > 90 && average <= 100) {
+//     return "Avaragescore: А";
+//   }
+//   if (average > 80 && average <= 90) {
+//     return "Avaragescore: B";
+//   }
+//   if (average > 70 && average <= 80) {
+//     return "Avaragescore: C";
+//   }
+//   if (average <= 70 && average >= 0) {
+//     return "Avaragescore: D";
+//   }
+//   return "Incorrect";
+// };
+
+// console.log(myAverageScore([100, 75, 81, 96]));
+// console.log(myAverageScore([45, 63, 85, 70]));
+
+// *   5.
+// Напишіть функцію, яка повертає новий масив,
+// в якому всі елементи масиву помножені на задане число,
+//  з використанням колбек-функції */
+// const array = [1, 2, 3, 4, 5];
+// const multiplyArray = (array, num, callback) => {
+//   let newArray = [];
+//   for (const element of array) {
+//     let result = callback(num, element);
+//     newArray.push(result);
+//   }
+//   return newArray;
+// };
+// const mull = (num, element) => num * element;
+// console.log(multiplyArray(array, 2, mull));
+
+// console.log(multiplyArray(array, 2, (num, element) => num + element));
+
+// console.log(multiplyArray(array, 2, (num, element) => element / num));
+
+// const myObject = {
+//   neme: "Artem",
+//   age: "15",
+//   city: "Lviv",
+//   occupation: "student",
+// };
+// console.log(myObject);
+
+let name = "Resort Hotel";
+let stars = 5;
+
+const es6hotel = {
+  stars,
+  hotelName: name,
+  capacity: 100,
+};
+// console.log(es6hotel);
+
+// 1.
+//  Оголоси змінну apartment і задай ій об'єкт,
+// який описує квартиру з наступними характеристиками:
+
+// descr - рядок, що містить опис,
+// значення "Spacious apartment in the city center";
+// rating - число, що містить рейтинг, значення 4;
+// price - число, що містить ціну, значення 2153;
+// tags - масив рядків, що містить метаінформацію,
+//  значення ["premium", "promoted", "top"].
+// name - рядок, що містить ім'я власника, значення "Henry";
+// phone - рядок, що містить номер телефону, значення "982-126-1588";
+// email - рядок, що містить пошту, значення "henry.carter@aptmail.com"
+// const phoneNum = "000-000-001";
+// const email = "henry.carter@aptmail.com";
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+//   tags: ["premium", "promoted", "top"],
+
+//   owner: {
+//     name: "Chuck",
+//     username: "Norris",
+//     phoneNum,
+//     email,
+//   },
+//   showPrice() {
+//     return this.price;
+//   },
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//     return `Ціну змінено на ${this.price}`;
+//   },
+//   isRatingGood() {
+//     if (this.rating > 8) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   },
+// };
+// console.log(apartment.changePrice(2000));
+// console.log(apartment.showPrice());
+// console.log(apartment.isRatingGood());
+
+// apartment.price = 5000;
+// apartment.tags.push["trasted"];
+
+// console.log(apartment);
+// console.log(apartment.descr);
+// console.log(apartment.rating);
+// console.log(apartment.price);
+// console.log(apartment.tags[1]);
+// console.log(apartment.owner.name);
+// console.log(apartment.owner.email);
+// console.log(apartment.tags.length);
+
+// const apartmentTagsLength = apartment.tags.length;
+// console.log(apartment.tags[apartmentTagsLength[length[-1]]]);
+// console.log(apartmentTagsLength);
+
+// const myObject = {
+//   neme: "Artem",
+//   age: "15",
+//   city: "Lviv",
+//   occupation: "student",
+//   increaseAge(age) {
+//     console.log(this);
+//     this.age = age;
+//   },
+//   changeOccupation(position) {
+//     this.occupation = position;
+//   },
+// };
+// myObject.increaseAge(32);
+// myObject.changeOccupation("teacher");
+// console.log(myObject);
