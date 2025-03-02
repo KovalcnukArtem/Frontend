@@ -137,4 +137,4 @@ const credentials = {
   [passwordInputName]: "jqueryismyjam",
 };
 
-console.log(credentials);
+// console.log(credentials);
