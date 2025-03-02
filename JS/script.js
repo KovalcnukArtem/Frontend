@@ -968,29 +968,29 @@ Average score: D (якщо середня оцінка від 70 і менше)
 // };
 // console.log(myObject);
 
-let name = "Resort Hotel";
-let stars = 5;
+// let name = "Resort Hotel";
+// let stars = 5;
 
-const es6hotel = {
-  stars,
-  hotelName: name,
-  capacity: 100,
-};
-// console.log(es6hotel);
+// const es6hotel = {
+//   stars,
+//   hotelName: name,
+//   capacity: 100,
+// };
+// // console.log(es6hotel);
 
-// 1.
-//  Оголоси змінну apartment і задай ій об'єкт,
-// який описує квартиру з наступними характеристиками:
+// // 1.
+// //  Оголоси змінну apartment і задай ій об'єкт,
+// // який описує квартиру з наступними характеристиками:
 
-// descr - рядок, що містить опис,
-// значення "Spacious apartment in the city center";
-// rating - число, що містить рейтинг, значення 4;
-// price - число, що містить ціну, значення 2153;
-// tags - масив рядків, що містить метаінформацію,
-//  значення ["premium", "promoted", "top"].
-// name - рядок, що містить ім'я власника, значення "Henry";
-// phone - рядок, що містить номер телефону, значення "982-126-1588";
-// email - рядок, що містить пошту, значення "henry.carter@aptmail.com"
+// // descr - рядок, що містить опис,
+// // значення "Spacious apartment in the city center";
+// // rating - число, що містить рейтинг, значення 4;
+// // price - число, що містить ціну, значення 2153;
+// // tags - масив рядків, що містить метаінформацію,
+// //  значення ["premium", "promoted", "top"].
+// // name - рядок, що містить ім'я власника, значення "Henry";
+// // phone - рядок, що містить номер телефону, значення "982-126-1588";
+// // email - рядок, що містить пошту, значення "henry.carter@aptmail.com"
 // const phoneNum = "000-000-001";
 // const email = "henry.carter@aptmail.com";
 // const apartment = {
@@ -1039,20 +1039,310 @@ const es6hotel = {
 // const apartmentTagsLength = apartment.tags.length;
 // console.log(apartment.tags[apartmentTagsLength[length[-1]]]);
 // console.log(apartmentTagsLength);
+// const keys = Object.keys(apartment);
+// console.log(keys);
+// const valuess = Object.values(apartment);
+// console.log(valuess);
 
-// const myObject = {
-//   neme: "Artem",
-//   age: "15",
-//   city: "Lviv",
-//   occupation: "student",
-//   increaseAge(age) {
-//     console.log(this);
-//     this.age = age;
-//   },
-//   changeOccupation(position) {
-//     this.occupation = position;
-//   },
+// // const myObject = {
+// //   neme: "Artem",
+// //   age: "15",
+// //   city: "Lviv",
+// //   occupation: "student",
+// //   increaseAge(age) {
+// //     console.log(this);
+// //     this.age = age;
+// //   },
+// //   changeOccupation(position) {
+// //     this.occupation = position;
+// //   },
+// // };
+// // myObject.increaseAge(32);
+// // myObject.changeOccupation("teacher");
+// // console.log(myObject);
+
+// // Дано масив об’єктів
+// const friends = [
+//   { name: "Mango", online: false },
+//   { name: "Kiwi", online: true },
+//   { name: "Poly", online: false },
+//   { name: "Ajax", online: true },
+// ];
+// // Написати функцію яка буде повертати масив всіх імен друзів
+
+// const getAllNames = function (friends) {
+//   const names = [];
+
+//   for (const friend of friends) {
+//     // console.log(friend.name);
+//     names.push(friend.name);
+//   }
+//   return names;
 // };
-// myObject.increaseAge(32);
-// myObject.changeOccupation("teacher");
-// console.log(myObject);
+// console.log(getAllNames(friends));
+// // Написати функ, яка буде повертати масив імен друзів які онлайн
+
+// const getOnlineFriends = (friends) => {
+//   const onlineFriends = [];
+
+//   for (const friend of friends) {
+//     if (friend.online) {
+//       console.log(friend.online);
+//       onlineFriends.push(friend);
+//     }
+//   }
+//   return onlineFriends;
+// };
+// console.log(getOnlineFriends(friends));
+
+// 1
+const lastWeekTemps = [14, 25, 11];
+const currentWeekTemps = [23, 17, 18];
+const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+// console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+// 2
+const firstGroupScores = [64, 42, 93];
+const secondGroupScores = [89, 14, 51, 26];
+const thirdGroupScores = [29, 47, 18, 97, 81];
+
+const allScores = [
+  ...firstGroupScores,
+  ...secondGroupScores,
+  ...thirdGroupScores,
+];
+// console.log(allScores);
+
+const bestScore = Math.max(...allScores);
+const worstScore = Math.min(...allScores);
+// console.log(bestScore, worstScore);
+
+// Задачка поєднати об,єкти
+const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+
+const finalSettings = {
+  ...defaultSettings,
+  ...overrideSettings,
+};
+// console.log(finalSettings);
+
+// 1.
+// Скопіювати масив викор розпорошення
+const numberss = [1, 2, 3, 54, 12];
+// 2.
+// Скопіювати обєкт викор розпорошення
+const apartment = {
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+};
+
+const newNumbers = [...numberss];
+// console.log(newNumbers);
+const newApartment = { ...apartment };
+// console.log(newApartment);
+
+// 3.
+// Функція getExtremeScores(scores)
+// приймає масив оцінок (чисел) у параметрі scores.
+// вона повертала об'єкт із двома властивостями:
+// Властивість best має містити найбільше число з масиву scores
+// Властивість worst має містити найменше число з масиву scores.
+// Використовуй оператор (...spread) і методи Math.max() і Math.min().
+
+const getExtremeScores = function (scores) {
+  const bestExtremeScores = Math.max(...scores);
+  const worstExtremeScores = Math.min(...scores);
+
+  const scoresObject = { best: bestExtremeScores, worst: worstExtremeScores };
+
+  console.log(bestExtremeScores, worstExtremeScores, scoresObject);
+
+  return scoresObject;
+};
+
+// getExtremeScores([89, 64, 42, 17, 93, 51, 26]); //{ best: 93, worst: 17 }
+// getExtremeScores([19, 7, 4, 17, 81, 24]); //{ best: 81, worst: 4 }
+
+// Об’єкт movie
+const movie = {
+  title: "The Shawshank Redemption",
+  director: {
+    name: "Frank Darabont",
+    nationality: "American",
+  },
+  actors: ["Tim Robbins", "Morgan Freeman"],
+  release_year: 1994,
+  ratings: {
+    imdb: 9.3,
+    rotten_tomatoes: 90,
+  },
+};
+const {
+  title,
+  director: { name, nationality },
+  actors: [actorRobbins, actorFreeman],
+  release_year,
+  ratings: { imdb, rotten_tomatoes },
+} = movie;
+// console.log(actorRobbins, actorFreeman);
+
+// Об’єкт books
+const books = {
+  count: 3,
+  list: [
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      year: 1925,
+    },
+    {
+      title: "To Kill a Mockingbird",
+      author: "Harper Lee",
+      year: 1960,
+    },
+    {
+      title: "1984",
+      author: "George Orwell",
+      year: 1949,
+    },
+  ],
+};
+
+// const {
+//   count,
+//   list: [bookGatsby, bookMockingbird, book1984],
+// } = books;
+// console.log(bookGatsby, bookMockingbird, book1984);
+// console.log(bookGatsby.author);
+// console.log(bookGatsby.title);
+// console.log(bookGatsby.year);
+const {
+  count,
+  list: [bookGatsby, bookMockingbird, book1984],
+} = books;
+
+// console.log(book1984);
+
+const { title: bookTitle, author, year: bookYear } = book1984;
+
+// console.log(bookTitle);
+// console.log(author);
+// console.log(bookYear);
+
+// ДЗ
+// Напиши сценарій керування особистим кабінетом інтернет-банку.
+// Є об'єкт account в якому необхідно реалізувати методи
+// для роботи з балансом та історією транзакцій.
+/*
+ * Типів транзацкій всього два.
+ * Можна покласти або зняти гроші з рахунку.
+ */
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
+};
+/*
+ * Кожна транзакція - це об'єкт з властивостями: 
+id, type і amount
+ */
+const account = {
+  // Поточний баланс рахунку
+  balance: 0,
+  // Історія транзакцій
+  transactions: [],
+  /*
+   * Метод створює і повертає об'єкт транзакції.
+   * Приймає суму і тип транзакції.
+   */
+  createTransaction(amount, type) {
+    const transaction = {
+      id: this.transactions.length,
+      type: type,
+      amount: amount,
+    };
+    return transaction;
+  },
+  /*
+   * Метод відповідає за додавання суми до балансу.
+   * Приймає суму танзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * після чого додає його в історію транзакцій
+   */
+  deposit(amount) {
+    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+    this.balance += amount;
+    this.transactions.push(newTransaction);
+  },
+  /*
+   * Метод відповідає за зняття суми з балансу.
+   * Приймає суму танзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * після чого додає його в історію транзакцій.
+   *
+   * Якщо amount більше, ніж поточний баланс, виводь повідомлення
+   * про те, що зняття такої суми не можливо, недостатньо коштів.
+   */
+  withdraw(amount) {
+    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+    if (amount > this.balance) {
+      return "Зняття такої суми неможливе! Недостатньо коштів";
+    }
+    this.balance -= amount;
+    this.transactions.push(newTransaction);
+  },
+  /*
+   * Метод повертає поточний баланс
+   */
+  getBalance() {
+    return this.balance;
+  },
+  /*
+   * Метод шукає і повертає об'єкт транзакції по id
+   */
+  getTransactionDetails(id) {
+    for (const transaction of this.transactions) {
+      if (transaction.id === id) {
+        return transaction;
+      }
+    }
+    return "Not found!";
+  },
+  /*
+   * Метод повертає кількість коштів
+   * певного типу транзакції з усієї історії транзакцій
+   */
+  getTransactionTotal(type) {},
+};
+
+console.log(account.getBalance());
+// account.deposit(100);
+console.log(account.getBalance());
+account.deposit(10);
+console.log(account.getBalance());
+// account.withdraw(20);
+console.log(account.getBalance());
+account.withdraw(40);
+console.log(account.getBalance());
+
+console.log("Transaction 1: ");
+console.log(account.getTransactionDetails(1));
+console.log("Transaction 3: ");
+console.log(account.getTransactionDetails(3));
+console.log("Transaction 4: ");
+console.log(account.getTransactionDetails(4));
+console.log(account.transactions);
+
+// console.log('Withdrawals: ' + account.getTransactionTotal(Transaction.WITHDRAW));
+// console.log('Deposits: ' + account.getTransactionTotal(Transaction.DEPOSIT));
