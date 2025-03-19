@@ -815,534 +815,745 @@ taxRate - число, податкова ставка. Необов'язкови
 // const res = checkStorage(["apple", "plum", "pear"], "pLuM");
 // console.log(res);
 
-const filterNumbers = function (array, ...args) {
-  let elements = [];
+// const filterNumbers = function (array, ...args) {
+//   let elements = [];
 
-  for (const element of array) {
-    if (args.includes(element)) {
-      elements.push(element);
-      console.log(element);
-    }
-  }
-
-  return elements;
-};
-// console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
-// console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
-// console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
-
-/*   1.
-Напишіть функцію, яка приймає на вхід масив чисел 
-і повертає новий масив, в якому кожний елемент є 
-квадратом відповідного елементу вхідного масиву.
-Знайдіть суму елементів масиву 
-з використанням колбек-функції */
-// const arr = [1, 2, 3, 4, 5];
-// const squareArray = function (arr) {
-//   const array = [];
-//   for (const number of arr) {
-//     array.push(number ** 2);
-//   }
-//   return array;
-// };
-
-// const sumArray = function (arr, callback) {
-//   const newArray = callback(arr);
-//   console.log(newArray);
-//   let sum = 0;
-
-//   for (const num of newArray) {
-//     sum += num;
-//   }
-//   // console.log(sum);
-//   return sum;
-// };
-
-// const result = sumArray(arr, squareArray);
-// console.log(result);
-// const addArray = (arr) {
-
-// };
-// const result2 = sumArray(array, addArray)
-
-//                                                       СТРІЛКОВІ Ф-ЇЇ
-// Створити стрілкову функцію helloW(),
-// яка при визові буде вертати текст “Привіт JavaScript”.
-// const helloW = () => {
-//   return "Hello JavaSCript!";
-// };
-// console.log(helloW());
-
-const helloW = () => "Hello JavaSCript!";
-// console.log(helloW());
-
-/*   2.
-Напишіть стрілкову функцію hello2(), 
-яка при виклику буде приймати змінну userName 
-(наприклад, «Василь») і виводити рядок 
-(в нашому випадку «Привіт, Василь»). */
-const helloN = (username) => `Привіт ${username}`;
-// console.log(helloN("Vasil!"));
-
-/*   3.
-Напишіть стрілкову функцію mul(n, m), 
-яка приймає два аргументи і 
-повертає добуток, суму і різницю цих аргументів.
-Перевірте її роботу. */
-// const mul = (n, m) => {
-//   const multiply = n * m;
-//   const total = n + m;
-//   const difference = n - m;
-//   return [multiply, total, difference];
-// };
-// console.log(mul(6, 6));
-// const mul = (n, m) => [n * m, n + m, n - m];
-// console.log(mul(6, 6));
-
-/*   4.
-Напиши стрілкову функцію myAverageScore , 
-яка у якості аргументу отримує масив з оцінками, 
-і виводить користувачу його середній результат 
-у наступному форматі:
-
-Averagescore: A (якщо середня оцінка від 91 до 100)
-Average score: B (якщо середня оцінка від 81 до 90)
-Average score: C (якщо середня оцінка від 71 до 80)
-Average score: D (якщо середня оцінка від 70 і менше)
-Для перевірки:*/
-// console.log(myAverageScore([100, 75, 81, 96]));
-// console.log(myAverageScore([45, 63, 85, 70]));
-// const myAverageScore = (array) => {
-//   let sum = 0;
-//   for (const num of array) {
-//     sum += num;
-//   }
-//   console.log(sum);
-
-//   const average = sum / array.length;
-//   console.log(average);
-
-//   if (average > 90 && average <= 100) {
-//     return "Avaragescore: А";
-//   }
-//   if (average > 80 && average <= 90) {
-//     return "Avaragescore: B";
-//   }
-//   if (average > 70 && average <= 80) {
-//     return "Avaragescore: C";
-//   }
-//   if (average <= 70 && average >= 0) {
-//     return "Avaragescore: D";
-//   }
-//   return "Incorrect";
-// };
-
-// console.log(myAverageScore([100, 75, 81, 96]));
-// console.log(myAverageScore([45, 63, 85, 70]));
-
-// *   5.
-// Напишіть функцію, яка повертає новий масив,
-// в якому всі елементи масиву помножені на задане число,
-//  з використанням колбек-функції */
-// const array = [1, 2, 3, 4, 5];
-// const multiplyArray = (array, num, callback) => {
-//   let newArray = [];
 //   for (const element of array) {
-//     let result = callback(num, element);
-//     newArray.push(result);
-//   }
-//   return newArray;
-// };
-// const mull = (num, element) => num * element;
-// console.log(multiplyArray(array, 2, mull));
-
-// console.log(multiplyArray(array, 2, (num, element) => num + element));
-
-// console.log(multiplyArray(array, 2, (num, element) => element / num));
-
-// const myObject = {
-//   neme: "Artem",
-//   age: "15",
-//   city: "Lviv",
-//   occupation: "student",
-// };
-// console.log(myObject);
-
-// let name = "Resort Hotel";
-// let stars = 5;
-
-// const es6hotel = {
-//   stars,
-//   hotelName: name,
-//   capacity: 100,
-// };
-// // console.log(es6hotel);
-
-// // 1.
-// //  Оголоси змінну apartment і задай ій об'єкт,
-// // який описує квартиру з наступними характеристиками:
-
-// // descr - рядок, що містить опис,
-// // значення "Spacious apartment in the city center";
-// // rating - число, що містить рейтинг, значення 4;
-// // price - число, що містить ціну, значення 2153;
-// // tags - масив рядків, що містить метаінформацію,
-// //  значення ["premium", "promoted", "top"].
-// // name - рядок, що містить ім'я власника, значення "Henry";
-// // phone - рядок, що містить номер телефону, значення "982-126-1588";
-// // email - рядок, що містить пошту, значення "henry.carter@aptmail.com"
-// const phoneNum = "000-000-001";
-// const email = "henry.carter@aptmail.com";
-// const apartment = {
-//   descr: "Spacious apartment in the city center",
-//   rating: 4,
-//   price: 2153,
-//   tags: ["premium", "promoted", "top"],
-
-//   owner: {
-//     name: "Chuck",
-//     username: "Norris",
-//     phoneNum,
-//     email,
-//   },
-//   showPrice() {
-//     return this.price;
-//   },
-//   changePrice(newPrice) {
-//     this.price = newPrice;
-//     return `Ціну змінено на ${this.price}`;
-//   },
-//   isRatingGood() {
-//     if (this.rating > 8) {
-//       return true;
-//     } else {
-//       return false;
+//     if (args.includes(element)) {
+//       elements.push(element);
+//       console.log(element);
 //     }
-//   },
+//   }
+
+//   return elements;
 // };
-// console.log(apartment.changePrice(2000));
-// console.log(apartment.showPrice());
-// console.log(apartment.isRatingGood());
+// // console.log(filterNumbers([1, 2, 3, 4, 5], 10, 15, 2, 3, 8)); // [2, 3]
+// // console.log(filterNumbers([10, 15, 25, 30], 23, 30, 18, 15)); // [30, 15]
+// // console.log(filterNumbers([100, 200, 300, 400, 500], 7, 12, 200, 64)); // [200]
 
-// apartment.price = 5000;
-// apartment.tags.push["trasted"];
+// /*   1.
+// Напишіть функцію, яка приймає на вхід масив чисел
+// і повертає новий масив, в якому кожний елемент є
+// квадратом відповідного елементу вхідного масиву.
+// Знайдіть суму елементів масиву
+// з використанням колбек-функції */
+// // const arr = [1, 2, 3, 4, 5];
+// // const squareArray = function (arr) {
+// //   const array = [];
+// //   for (const number of arr) {
+// //     array.push(number ** 2);
+// //   }
+// //   return array;
+// // };
 
-// console.log(apartment);
-// console.log(apartment.descr);
-// console.log(apartment.rating);
-// console.log(apartment.price);
-// console.log(apartment.tags[1]);
-// console.log(apartment.owner.name);
-// console.log(apartment.owner.email);
-// console.log(apartment.tags.length);
+// // const sumArray = function (arr, callback) {
+// //   const newArray = callback(arr);
+// //   console.log(newArray);
+// //   let sum = 0;
 
-// const apartmentTagsLength = apartment.tags.length;
-// console.log(apartment.tags[apartmentTagsLength[length[-1]]]);
-// console.log(apartmentTagsLength);
-// const keys = Object.keys(apartment);
-// console.log(keys);
-// const valuess = Object.values(apartment);
-// console.log(valuess);
+// //   for (const num of newArray) {
+// //     sum += num;
+// //   }
+// //   // console.log(sum);
+// //   return sum;
+// // };
+
+// // const result = sumArray(arr, squareArray);
+// // console.log(result);
+// // const addArray = (arr) {
+
+// // };
+// // const result2 = sumArray(array, addArray)
+
+// //                                                       СТРІЛКОВІ Ф-ЇЇ
+// // Створити стрілкову функцію helloW(),
+// // яка при визові буде вертати текст “Привіт JavaScript”.
+// // const helloW = () => {
+// //   return "Hello JavaSCript!";
+// // };
+// // console.log(helloW());
+
+// const helloW = () => "Hello JavaSCript!";
+// // console.log(helloW());
+
+// /*   2.
+// Напишіть стрілкову функцію hello2(),
+// яка при виклику буде приймати змінну userName
+// (наприклад, «Василь») і виводити рядок
+// (в нашому випадку «Привіт, Василь»). */
+// const helloN = (username) => `Привіт ${username}`;
+// // console.log(helloN("Vasil!"));
+
+// /*   3.
+// Напишіть стрілкову функцію mul(n, m),
+// яка приймає два аргументи і
+// повертає добуток, суму і різницю цих аргументів.
+// Перевірте її роботу. */
+// // const mul = (n, m) => {
+// //   const multiply = n * m;
+// //   const total = n + m;
+// //   const difference = n - m;
+// //   return [multiply, total, difference];
+// // };
+// // console.log(mul(6, 6));
+// // const mul = (n, m) => [n * m, n + m, n - m];
+// // console.log(mul(6, 6));
+
+// /*   4.
+// Напиши стрілкову функцію myAverageScore ,
+// яка у якості аргументу отримує масив з оцінками,
+// і виводить користувачу його середній результат
+// у наступному форматі:
+
+// Averagescore: A (якщо середня оцінка від 91 до 100)
+// Average score: B (якщо середня оцінка від 81 до 90)
+// Average score: C (якщо середня оцінка від 71 до 80)
+// Average score: D (якщо середня оцінка від 70 і менше)
+// Для перевірки:*/
+// // console.log(myAverageScore([100, 75, 81, 96]));
+// // console.log(myAverageScore([45, 63, 85, 70]));
+// // const myAverageScore = (array) => {
+// //   let sum = 0;
+// //   for (const num of array) {
+// //     sum += num;
+// //   }
+// //   console.log(sum);
+
+// //   const average = sum / array.length;
+// //   console.log(average);
+
+// //   if (average > 90 && average <= 100) {
+// //     return "Avaragescore: А";
+// //   }
+// //   if (average > 80 && average <= 90) {
+// //     return "Avaragescore: B";
+// //   }
+// //   if (average > 70 && average <= 80) {
+// //     return "Avaragescore: C";
+// //   }
+// //   if (average <= 70 && average >= 0) {
+// //     return "Avaragescore: D";
+// //   }
+// //   return "Incorrect";
+// // };
+
+// // console.log(myAverageScore([100, 75, 81, 96]));
+// // console.log(myAverageScore([45, 63, 85, 70]));
+
+// // *   5.
+// // Напишіть функцію, яка повертає новий масив,
+// // в якому всі елементи масиву помножені на задане число,
+// //  з використанням колбек-функції */
+// // const array = [1, 2, 3, 4, 5];
+// // const multiplyArray = (array, num, callback) => {
+// //   let newArray = [];
+// //   for (const element of array) {
+// //     let result = callback(num, element);
+// //     newArray.push(result);
+// //   }
+// //   return newArray;
+// // };
+// // const mull = (num, element) => num * element;
+// // console.log(multiplyArray(array, 2, mull));
+
+// // console.log(multiplyArray(array, 2, (num, element) => num + element));
+
+// // console.log(multiplyArray(array, 2, (num, element) => element / num));
 
 // // const myObject = {
 // //   neme: "Artem",
 // //   age: "15",
 // //   city: "Lviv",
 // //   occupation: "student",
-// //   increaseAge(age) {
-// //     console.log(this);
-// //     this.age = age;
-// //   },
-// //   changeOccupation(position) {
-// //     this.occupation = position;
-// //   },
 // // };
-// // myObject.increaseAge(32);
-// // myObject.changeOccupation("teacher");
 // // console.log(myObject);
 
-// // Дано масив об’єктів
-// const friends = [
-//   { name: "Mango", online: false },
-//   { name: "Kiwi", online: true },
-//   { name: "Poly", online: false },
-//   { name: "Ajax", online: true },
+// // let name = "Resort Hotel";
+// // let stars = 5;
+
+// // const es6hotel = {
+// //   stars,
+// //   hotelName: name,
+// //   capacity: 100,
+// // };
+// // // console.log(es6hotel);
+
+// // // 1.
+// // //  Оголоси змінну apartment і задай ій об'єкт,
+// // // який описує квартиру з наступними характеристиками:
+
+// // // descr - рядок, що містить опис,
+// // // значення "Spacious apartment in the city center";
+// // // rating - число, що містить рейтинг, значення 4;
+// // // price - число, що містить ціну, значення 2153;
+// // // tags - масив рядків, що містить метаінформацію,
+// // //  значення ["premium", "promoted", "top"].
+// // // name - рядок, що містить ім'я власника, значення "Henry";
+// // // phone - рядок, що містить номер телефону, значення "982-126-1588";
+// // // email - рядок, що містить пошту, значення "henry.carter@aptmail.com"
+// // const phoneNum = "000-000-001";
+// // const email = "henry.carter@aptmail.com";
+// // const apartment = {
+// //   descr: "Spacious apartment in the city center",
+// //   rating: 4,
+// //   price: 2153,
+// //   tags: ["premium", "promoted", "top"],
+
+// //   owner: {
+// //     name: "Chuck",
+// //     username: "Norris",
+// //     phoneNum,
+// //     email,
+// //   },
+// //   showPrice() {
+// //     return this.price;
+// //   },
+// //   changePrice(newPrice) {
+// //     this.price = newPrice;
+// //     return `Ціну змінено на ${this.price}`;
+// //   },
+// //   isRatingGood() {
+// //     if (this.rating > 8) {
+// //       return true;
+// //     } else {
+// //       return false;
+// //     }
+// //   },
+// // };
+// // console.log(apartment.changePrice(2000));
+// // console.log(apartment.showPrice());
+// // console.log(apartment.isRatingGood());
+
+// // apartment.price = 5000;
+// // apartment.tags.push["trasted"];
+
+// // console.log(apartment);
+// // console.log(apartment.descr);
+// // console.log(apartment.rating);
+// // console.log(apartment.price);
+// // console.log(apartment.tags[1]);
+// // console.log(apartment.owner.name);
+// // console.log(apartment.owner.email);
+// // console.log(apartment.tags.length);
+
+// // const apartmentTagsLength = apartment.tags.length;
+// // console.log(apartment.tags[apartmentTagsLength[length[-1]]]);
+// // console.log(apartmentTagsLength);
+// // const keys = Object.keys(apartment);
+// // console.log(keys);
+// // const valuess = Object.values(apartment);
+// // console.log(valuess);
+
+// // // const myObject = {
+// // //   neme: "Artem",
+// // //   age: "15",
+// // //   city: "Lviv",
+// // //   occupation: "student",
+// // //   increaseAge(age) {
+// // //     console.log(this);
+// // //     this.age = age;
+// // //   },
+// // //   changeOccupation(position) {
+// // //     this.occupation = position;
+// // //   },
+// // // };
+// // // myObject.increaseAge(32);
+// // // myObject.changeOccupation("teacher");
+// // // console.log(myObject);
+
+// // // Дано масив об’єктів
+// // const friends = [
+// //   { name: "Mango", online: false },
+// //   { name: "Kiwi", online: true },
+// //   { name: "Poly", online: false },
+// //   { name: "Ajax", online: true },
+// // ];
+// // // Написати функцію яка буде повертати масив всіх імен друзів
+
+// // const getAllNames = function (friends) {
+// //   const names = [];
+
+// //   for (const friend of friends) {
+// //     // console.log(friend.name);
+// //     names.push(friend.name);
+// //   }
+// //   return names;
+// // };
+// // console.log(getAllNames(friends));
+// // // Написати функ, яка буде повертати масив імен друзів які онлайн
+
+// // const getOnlineFriends = (friends) => {
+// //   const onlineFriends = [];
+
+// //   for (const friend of friends) {
+// //     if (friend.online) {
+// //       console.log(friend.online);
+// //       onlineFriends.push(friend);
+// //     }
+// //   }
+// //   return onlineFriends;
+// // };
+// // console.log(getOnlineFriends(friends));
+
+// // 1
+// const lastWeekTemps = [14, 25, 11];
+// const currentWeekTemps = [23, 17, 18];
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+// // console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+
+// // 2
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
 // ];
-// // Написати функцію яка буде повертати масив всіх імен друзів
+// // console.log(allScores);
 
-// const getAllNames = function (friends) {
-//   const names = [];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+// // console.log(bestScore, worstScore);
 
-//   for (const friend of friends) {
-//     // console.log(friend.name);
-//     names.push(friend.name);
-//   }
-//   return names;
+// // Задачка поєднати об,єкти
+// const defaultSettings = {
+//   theme: "light",
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
 // };
-// console.log(getAllNames(friends));
-// // Написати функ, яка буде повертати масив імен друзів які онлайн
-
-// const getOnlineFriends = (friends) => {
-//   const onlineFriends = [];
-
-//   for (const friend of friends) {
-//     if (friend.online) {
-//       console.log(friend.online);
-//       onlineFriends.push(friend);
-//     }
-//   }
-//   return onlineFriends;
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
 // };
-// console.log(getOnlineFriends(friends));
 
-// 1
-const lastWeekTemps = [14, 25, 11];
-const currentWeekTemps = [23, 17, 18];
-const allTemps = [...lastWeekTemps, ...currentWeekTemps];
-// console.log(allTemps); // [14, 25, 11, 23, 17, 18]
+// const finalSettings = {
+//   ...defaultSettings,
+//   ...overrideSettings,
+// };
+// // console.log(finalSettings);
 
-// 2
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
+// // 1.
+// // Скопіювати масив викор розпорошення
+// const numberss = [1, 2, 3, 54, 12];
+// // 2.
+// // Скопіювати обєкт викор розпорошення
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
 
-const allScores = [
-  ...firstGroupScores,
-  ...secondGroupScores,
-  ...thirdGroupScores,
-];
-// console.log(allScores);
+// const newNumbers = [...numberss];
+// // console.log(newNumbers);
+// const newApartment = { ...apartment };
+// // console.log(newApartment);
 
-const bestScore = Math.max(...allScores);
-const worstScore = Math.min(...allScores);
-// console.log(bestScore, worstScore);
+// // 3.
+// // Функція getExtremeScores(scores)
+// // приймає масив оцінок (чисел) у параметрі scores.
+// // вона повертала об'єкт із двома властивостями:
+// // Властивість best має містити найбільше число з масиву scores
+// // Властивість worst має містити найменше число з масиву scores.
+// // Використовуй оператор (...spread) і методи Math.max() і Math.min().
 
-// Задачка поєднати об,єкти
-const defaultSettings = {
-  theme: "light",
-  public: true,
-  withPassword: false,
-  minNumberOfQuestions: 10,
-  timePerQuestion: 60,
-};
-const overrideSettings = {
-  public: false,
-  withPassword: true,
-  timePerQuestion: 30,
-};
+// const getExtremeScores = function (scores) {
+//   const bestExtremeScores = Math.max(...scores);
+//   const worstExtremeScores = Math.min(...scores);
 
-const finalSettings = {
-  ...defaultSettings,
-  ...overrideSettings,
-};
-// console.log(finalSettings);
+//   const scoresObject = { best: bestExtremeScores, worst: worstExtremeScores };
 
-// 1.
-// Скопіювати масив викор розпорошення
-const numberss = [1, 2, 3, 54, 12];
-// 2.
-// Скопіювати обєкт викор розпорошення
-const apartment = {
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-};
+//   console.log(bestExtremeScores, worstExtremeScores, scoresObject);
 
-const newNumbers = [...numberss];
-// console.log(newNumbers);
-const newApartment = { ...apartment };
-// console.log(newApartment);
+//   return scoresObject;
+// };
 
-// 3.
-// Функція getExtremeScores(scores)
-// приймає масив оцінок (чисел) у параметрі scores.
-// вона повертала об'єкт із двома властивостями:
-// Властивість best має містити найбільше число з масиву scores
-// Властивість worst має містити найменше число з масиву scores.
-// Використовуй оператор (...spread) і методи Math.max() і Math.min().
+// // getExtremeScores([89, 64, 42, 17, 93, 51, 26]); //{ best: 93, worst: 17 }
+// // getExtremeScores([19, 7, 4, 17, 81, 24]); //{ best: 81, worst: 4 }
 
-const getExtremeScores = function (scores) {
-  const bestExtremeScores = Math.max(...scores);
-  const worstExtremeScores = Math.min(...scores);
+// // Об’єкт movie
+// const movie = {
+//   title: "The Shawshank Redemption",
+//   director: {
+//     name: "Frank Darabont",
+//     nationality: "American",
+//   },
+//   actors: ["Tim Robbins", "Morgan Freeman"],
+//   release_year: 1994,
+//   ratings: {
+//     imdb: 9.3,
+//     rotten_tomatoes: 90,
+//   },
+// };
+// const {
+//   title,
+//   director: { name, nationality },
+//   actors: [actorRobbins, actorFreeman],
+//   release_year,
+//   ratings: { imdb, rotten_tomatoes },
+// } = movie;
+// // console.log(actorRobbins, actorFreeman);
 
-  const scoresObject = { best: bestExtremeScores, worst: worstExtremeScores };
+// // Об’єкт books
+// const books = {
+//   count: 3,
+//   list: [
+//     {
+//       title: "The Great Gatsby",
+//       author: "F. Scott Fitzgerald",
+//       year: 1925,
+//     },
+//     {
+//       title: "To Kill a Mockingbird",
+//       author: "Harper Lee",
+//       year: 1960,
+//     },
+//     {
+//       title: "1984",
+//       author: "George Orwell",
+//       year: 1949,
+//     },
+//   ],
+// };
 
-  console.log(bestExtremeScores, worstExtremeScores, scoresObject);
-
-  return scoresObject;
-};
-
-// getExtremeScores([89, 64, 42, 17, 93, 51, 26]); //{ best: 93, worst: 17 }
-// getExtremeScores([19, 7, 4, 17, 81, 24]); //{ best: 81, worst: 4 }
-
-// Об’єкт movie
-const movie = {
-  title: "The Shawshank Redemption",
-  director: {
-    name: "Frank Darabont",
-    nationality: "American",
-  },
-  actors: ["Tim Robbins", "Morgan Freeman"],
-  release_year: 1994,
-  ratings: {
-    imdb: 9.3,
-    rotten_tomatoes: 90,
-  },
-};
-const {
-  title,
-  director: { name, nationality },
-  actors: [actorRobbins, actorFreeman],
-  release_year,
-  ratings: { imdb, rotten_tomatoes },
-} = movie;
-// console.log(actorRobbins, actorFreeman);
-
-// Об’єкт books
-const books = {
-  count: 3,
-  list: [
-    {
-      title: "The Great Gatsby",
-      author: "F. Scott Fitzgerald",
-      year: 1925,
-    },
-    {
-      title: "To Kill a Mockingbird",
-      author: "Harper Lee",
-      year: 1960,
-    },
-    {
-      title: "1984",
-      author: "George Orwell",
-      year: 1949,
-    },
-  ],
-};
-
+// // const {
+// //   count,
+// //   list: [bookGatsby, bookMockingbird, book1984],
+// // } = books;
+// // console.log(bookGatsby, bookMockingbird, book1984);
+// // console.log(bookGatsby.author);
+// // console.log(bookGatsby.title);
+// // console.log(bookGatsby.year);
 // const {
 //   count,
 //   list: [bookGatsby, bookMockingbird, book1984],
 // } = books;
-// console.log(bookGatsby, bookMockingbird, book1984);
-// console.log(bookGatsby.author);
-// console.log(bookGatsby.title);
-// console.log(bookGatsby.year);
-const {
-  count,
-  list: [bookGatsby, bookMockingbird, book1984],
-} = books;
 
-// console.log(book1984);
+// // console.log(book1984);
 
-const { title: bookTitle, author, year: bookYear } = book1984;
+// const { title: bookTitle, author, year: bookYear } = book1984;
 
-// console.log(bookTitle);
-// console.log(author);
-// console.log(bookYear);
+// // console.log(bookTitle);
+// // console.log(author);
+// // console.log(bookYear);
 
-// ДЗ
-// Напиши сценарій керування особистим кабінетом інтернет-банку.
-// Є об'єкт account в якому необхідно реалізувати методи
-// для роботи з балансом та історією транзакцій.
-/*
- * Типів транзацкій всього два.
- * Можна покласти або зняти гроші з рахунку.
- */
-const Transaction = {
-  DEPOSIT: "deposit",
-  WITHDRAW: "withdraw",
-};
-/*
- * Кожна транзакція - це об'єкт з властивостями: 
-id, type і amount
- */
-const account = {
-  // Поточний баланс рахунку
-  balance: 0,
-  // Історія транзакцій
-  transactions: [],
-  /*
-   * Метод створює і повертає об'єкт транзакції.
-   * Приймає суму і тип транзакції.
-   */
-  createTransaction(amount, type) {
-    const transaction = {
-      id: this.transactions.length,
-      type: type,
-      amount: amount,
-    };
-    return transaction;
-  },
-  /*
-   * Метод відповідає за додавання суми до балансу.
-   * Приймає суму танзакції.
-   * Викликає createTransaction для створення об'єкта транзакції
-   * після чого додає його в історію транзакцій
-   */
-  deposit(amount) {
-    const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
-    this.balance += amount;
-    this.transactions.push(newTransaction);
-  },
-  /*
-   * Метод відповідає за зняття суми з балансу.
-   * Приймає суму танзакції.
-   * Викликає createTransaction для створення об'єкта транзакції
-   * після чого додає його в історію транзакцій.
-   *
-   * Якщо amount більше, ніж поточний баланс, виводь повідомлення
-   * про те, що зняття такої суми не можливо, недостатньо коштів.
-   */
-  withdraw(amount) {
-    const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
-    if (amount > this.balance) {
-      return "Зняття такої суми неможливе! Недостатньо коштів";
-    }
-    this.balance -= amount;
-    this.transactions.push(newTransaction);
-  },
-  /*
-   * Метод повертає поточний баланс
-   */
-  getBalance() {
-    return this.balance;
-  },
-  /*
-   * Метод шукає і повертає об'єкт транзакції по id
-   */
-  getTransactionDetails(id) {
-    for (const transaction of this.transactions) {
-      if (transaction.id === id) {
-        return transaction;
-      }
-    }
-    return "Not found!";
-  },
-  /*
-   * Метод повертає кількість коштів
-   * певного типу транзакції з усієї історії транзакцій
-   */
-  getTransactionTotal(type) {},
-};
+// // ДЗ
+// // Напиши сценарій керування особистим кабінетом інтернет-банку.
+// // Є об'єкт account в якому необхідно реалізувати методи
+// // для роботи з балансом та історією транзакцій.
+// /*
+//  * Типів транзацкій всього два.
+//  * Можна покласти або зняти гроші з рахунку.
+//  */
+// const Transaction = {
+//   DEPOSIT: "deposit",
+//   WITHDRAW: "withdraw",
+// };
+// /*
+//  * Кожна транзакція - це об'єкт з властивостями:
+// id, type і amount
+//  */
+// const account = {
+//   // Поточний баланс рахунку
+//   balance: 0,
+//   // Історія транзакцій
+//   transactions: [],
+//   /*
+//    * Метод створює і повертає об'єкт транзакції.
+//    * Приймає суму і тип транзакції.
+//    */
+//   createTransaction(amount, type) {
+//     const transaction = {
+//       id: this.transactions.length,
+//       type: type,
+//       amount: amount,
+//     };
+//     return transaction;
+//   },
+//   /*
+//    * Метод відповідає за додавання суми до балансу.
+//    * Приймає суму танзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його в історію транзакцій
+//    */
+//   deposit(amount) {
+//     const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.balance += amount;
+//     this.transactions.push(newTransaction);
+//   },
+//   /*
+//    * Метод відповідає за зняття суми з балансу.
+//    * Приймає суму танзакції.
+//    * Викликає createTransaction для створення об'єкта транзакції
+//    * після чого додає його в історію транзакцій.
+//    *
+//    * Якщо amount більше, ніж поточний баланс, виводь повідомлення
+//    * про те, що зняття такої суми не можливо, недостатньо коштів.
+//    */
+//   withdraw(amount) {
+//     const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     if (amount > this.balance) {
+//       return "Зняття такої суми неможливе! Недостатньо коштів";
+//     }
+//     this.balance -= amount;
+//     this.transactions.push(newTransaction);
+//   },
+//   /*
+//    * Метод повертає поточний баланс
+//    */
+//   getBalance() {
+//     return this.balance;
+//   },
+//   /*
+//    * Метод шукає і повертає об'єкт транзакції по id
+//    */
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     return "Not found!";
+//   },
+//   /*
+//    * Метод повертає кількість коштів
+//    * певного типу транзакції з усієї історії транзакцій
+//    */
+//   getTransactionTotal(type) {},
+// };
 
-console.log(account.getBalance());
-// account.deposit(100);
-console.log(account.getBalance());
-account.deposit(10);
-console.log(account.getBalance());
-// account.withdraw(20);
-console.log(account.getBalance());
-account.withdraw(40);
-console.log(account.getBalance());
+// console.log(account.getBalance());
+// // account.deposit(100);
+// console.log(account.getBalance());
+// account.deposit(10);
+// console.log(account.getBalance());
+// // account.withdraw(20);
+// console.log(account.getBalance());
+// account.withdraw(40);
+// console.log(account.getBalance());
 
-console.log("Transaction 1: ");
-console.log(account.getTransactionDetails(1));
-console.log("Transaction 3: ");
-console.log(account.getTransactionDetails(3));
-console.log("Transaction 4: ");
-console.log(account.getTransactionDetails(4));
-console.log(account.transactions);
+// console.log("Transaction 1: ");
+// console.log(account.getTransactionDetails(1));
+// console.log("Transaction 3: ");
+// console.log(account.getTransactionDetails(3));
+// console.log("Transaction 4: ");
+// console.log(account.getTransactionDetails(4));
+// console.log(account.transactions);
 
-// console.log('Withdrawals: ' + account.getTransactionTotal(Transaction.WITHDRAW));
-// console.log('Deposits: ' + account.getTransactionTotal(Transaction.DEPOSIT));
+// // console.log('Withdrawals: ' + account.getTransactionTotal(Transaction.WITHDRAW));
+// // console.log('Deposits: ' + account.getTransactionTotal(Transaction.DEPOSIT));
+// //                                                          arrays methods
+// // 1.
+// const calculateTotal = function (items) {
+//   let total = 0;
+
+//   items.forEach((item) => (total += item));
+//   return total;
+// };
+// console.log(calculateTotal([12, 85, 37, 4])); //повертає 138
+// console.log(calculateTotal([164, 48, 291])); //повертає 503
+
+// // 2.
+// // Доповни Функцію filterArr(numbers, value)
+// // приймає  масив чисел numbers і value
+// // має поверти новий масив, з елементами оригінального масиву,
+// // які більші за значення числа value.
+// // або повертає порожній масив.
+
+// const filterArr = function (numbers, value) {
+//   let filteredArr = [];
+
+//   numbers.forEach((item) => {
+//     if (item > value) {
+//       filteredArr.push(item);
+//     }
+//   });
+
+//   return filteredArr;
+// };
+// console.log(filterArr([1, 2, 3, 4, 5], 4)); //повертає [5]
+// console.log(filterArr([1, 2, 3, 4, 5], 5)); //повертає []
+// console.log(filterArr([12, 24, 8, 41, 76], 38)); // повертає[(41, 76)];
+
+// // 3. Зроби новий масив планет у аперкейс
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+
+// const planetsInUpperCase = planets.map((planet) => planet.toUpperCase());
+// console.log(planetsInUpperCase); // ["EARTH", "MARS", "VENUS", "JUPITER"]
+
+// // 4. Збережи у змінній planetsLengths масив,
+// // що буде складатися з довжин назв кожної планети
+// const planetsLengths = planets.map((planet) => planet.length);
+// console.log(planetsLengths);
+
+// // 5.
+// // const players = [
+// //   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+// //   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+// //   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+// //   { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
+// //   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// // ];
+
+// // const plyersNames = players.map((player) => player.name);
+// // const newPlayerName = player.map(({ name }) => name);
+
+// // Використовуючи 👆 масив об’єктів виконай наступні завдання:
+// //map()
+// // Отримати масив імен всіх гравців
+// // Збільшити кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
+// // Збільшити кількість годин гравця по id. Переписати на тернарник
+// //filter()
+// // Отримати масив всіх гравців онлайн
+// // Отримати масив всіх гравців офлайн
+// // Отримати масив всіх хардкорних гравців з часом більше 250
+// //Find()
+// // Знайти гравця по id
+// // Знайти гравця по імені
+// //every()
+// // Перевірити чи всі гравці
+// //every()
+// // Перевірити чи всі гравці мають час більше 200
+// // Перевірити чи всі гравці онлайн
+
+// const players = [
+//   { id: "player-1", name: "Mango", timePlayed: 310, points: 54, online: false },
+//   { id: "player-2", name: "Poly", timePlayed: 470, points: 92, online: true },
+//   { id: "player-3", name: "Kiwi", timePlayed: 230, points: 48, online: true },
+//   { id: "player-4", name: "Ajax", timePlayed: 150, points: 71, online: false },
+//   { id: "player-5", name: "Chelsy", timePlayed: 80, points: 48, online: true },
+// ];
+// const sortedByName = players
+//   .toSorted((a, b) => a.name.localeCompare(b.name))
+//   .map((player) => player.name);
+// // console.log(sortedByName);
+
+// // const sortedByTimePlayed = players.toSorted(
+// //   (a, b) => a.timePlayed - b.timePlayed
+// // );
+// // console.log(sortedByTimePlayed);
+
+// // const sortedByWorstPlayers = players.toSorted(
+// //   (a, b) => b.timePlayed - a.timePlayed
+// // );
+// // console.log(sortedByWorstPlayers);
+
+// const scores3 = [27, 2, 41, 4, 7, 3, 75];
+// // console.log(scores3.toSorted((a, b) => a - b)); // [2, 27, 3, 4, 41, 7, 75]
+
+// // Масив рядків сортується за алфавітом.
+// const students = ["Jacob", "Artemis", "Solomon", "Adrian", "Kai", "Ganymede"];
+// // console.log(students.toSorted());
+// // console.log(students.toSorted((a, b) => a.localeCompare(b)));
+// // Водночас порядковий номер великих літер менший, ніж у малих.
+// const letters = ["b", "B", "a", "A", "c", "C"];
+// // console.log(letters.toSorted()); // ["A", "B", "C", "a", "b", "c"]
+// // console.log(letters.toSorted((a, b) => a.localeCompare(b)));
+
+// // const totalTime = players.reduce((acc, player) => {
+// //   const total = acc + player.timePlayed;
+// //   return total;
+// // }, 0);
+// // console.log(totalTime);
+
+// // const playersOnline = players.filter((player) => player.online);
+// // console.log(playersOnline);
+
+// // // Використовуючи 👆 масив об’єктів виконай наступні завдання:
+// // //map()
+// // // Отримати масив імен всіх гравців
+// // // Збільшити кількість поінтів кожного гравця на 10% (розпорошуємо старий об'єкт)
+// // // Збільшити кількість годин гравця по id. Переписати на тернарник
+// // //filter()
+// // // Отримати масив всіх гравців онлайн
+
+// // // Отримати масив всіх гравців офлайн
+// // const playersOffline = players.filter((player) => !player.online);
+// // console.log(playersOffline);
+
+// // // Отримати масив всіх хардкорних гравців з часом більше 250
+// // const hardcorePlayers = players.filter((player) => player.timePlayed > 250);
+// // console.log(hardcorePlayers);
+
+// // //Find()
+// // // Знайти гравця по id
+// // const playerById = players.find((player) => player.id === "player-4");
+// // console.log(playerById);
+
+// // // Знайти гравця по імені
+// // const playerByName = players.find((player) => player.name === "Mango");
+// // console.log(playerByName);
+
+// // //every()
+// // // Перевірити чи всі гравці мають час більше 200
+// // const isTimeGood = players.every((player) => player.timePlayed > 200);
+// // console.log(isTimeGood);
+
+// // Перевірити чи всі гравці онлайн
+
+// // 2.  Порахувати загальну кількість товарів в кошику
+// // const cart = [
+// //   { label: "Apples", price: 100, quantity: 2 },
+// //   { label: "Bananas", price: 120, quantity: 3 },
+// //   { label: "Lemons", price: 70, quantity: 4 },
+// // ];
+// // const totalAmount = cart.reduce((acc, element) => {
+// //   return acc + element.quantity;
+// // }, 0);
+// // console.log(totalAmount);
+// // const totalPrice = cart.reduce((acc, element) => {
+// //   return acc + element.price * element.quantity;
+// // }, 0);
+// // console.log(totalPrice);
+
+// // // 3.  Знайдіть середнє значення чисел в масиві
+// // const numbers4 = [1, 2, 3, 4, 5];
+// // const totalNumber = numbers4.reduce((acc, number) => {
+// //   return acc + number;
+// // }, 0);
+// // const average = totalNumber / numbers4.length;
+
+// // console.log(totalNumber, average);
+
+// //                                                                     ООП
+// // 1
+// // Створіть клас Person, що містить властивості
+// // firstName та lastName.
+// // Додайте метод getFullName(), який повертає
+// // повне ім'я у форматі "firstName lastName".
+
+// // class Person {
+// //   constructor(firstName, lastName) {
+// //     this.firstName = firstName;
+// //     this.lastName = lastName;
+// //   }
+
+// //   getFullName() {
+// //     return `${this.firstName} ${this.lastName}`;
+// //   }
+// // }
+
+// // const person1 = new Person("John", "Doe");
+// // console.log(person1.getFullName()); // John Doe
+
+// // // 2
+// // // Створіть клас Rectangle, що містить властивості
+// // // width та height.
+// // // Додайте метод getArea(), який повертає площу прямокутника.
+
+// // class Rectangle {
+// //   constructor(width, height) {
+// //     this.height = height;
+// //     this.width = width;
+// //   }
+
+// //   getArea() {
+// //     return this.height * this.width;
+// //   }
+// // }
+// // const rectangle1 = new Rectangle(10, 5);
+// // console.log(rectangle1.getArea()); // 50
